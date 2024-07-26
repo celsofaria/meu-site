@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Kingdom - Restaurante Infantil em Leiria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Children's Kingdom</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                    <li><a href="#localizacao" class="menu-link">Localização</a></li>
+                    <li><a href="#menu" class="menu-link">Menu</a></li>
+                    <li><a href="#reservas" class="menu-link">Reservas</a></li>
+                    <li><a href="#contato" class="menu-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao Children's Kingdom</h2>
+                <p>O lugar perfeito para uma experiência gastronômica divertida para toda a família!</p>
+            </div>
+        </section>
+        <section id="sobre" class="section about">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>O Children's Kingdom é um restaurante temático infantil localizado no coração de Leiria, Portugal. Nosso objetivo é proporcionar uma experiência única, oferecendo uma grande variedade de pratos doces e salgados, bebidas refrescantes e um ambiente divertido e acolhedor para toda a família.</p>
+            </div>
+        </section>
+        <section id="localizacao" class="section location">
+            <div class="container">
+                <h2>Localização e Horário de Funcionamento</h2>
+                <p>Estamos localizados na Rua das Crianças, 123, em Leiria, Portugal.</p>
+                <p>Horário de Funcionamento:</p>
+                <ul>
+                    <li>Segunda a Sexta: 12:00 - 15:00, 19:00 - 23:00</li>
+                    <li>Sábado e Domingo: 12:00 - 15:00, 19:00 - 23:00</li>
+                </ul>
+            </div>
+        </section>
+        <section id="menu" class="section menu">
+            <div class="container">
+                <h2>Menu</h2>
+                <div class="menu-category">
+                    <h3>Salgados</h3>
+                    <ul>
+                        <li>Mini hambúrguer carne</li>
+                        <li>Mini hambúrguer toscana</li>
+                        <li>Mini hambúrguer frango</li>
+                        <li>Enrolado de salsicha</li>
+                        <li>Coxinha de frango</li>
+                        <li>Rissóis de carne</li>
+                        <li>Batata frita</li>
+                        <li>Tiras de frango frito</li>
+                        <li>Bolinha de queijo</li>
+                        <li>Pipoca</li>
+                        <li>Bolinho de bacalhau</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Doces</h3>
+                    <ul>
+                        <li>Brigadeiro</li>
+                        <li>Beijinho</li>
+                        <li>Bolo</li>
+                        <li>Sorvete</li>
+                        <li>Bolo com sorvete</li>
+                        <li>Gelatina</li>
+                        <li>Mousse</li>
+                        <li>Mini churros</li>
+                        <li>Espeto de frutas (uva, morango, melancia)</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Bebidas</h3>
+                    <ul>
+                        <li>Água</li>
+                        <li>Suco</li>
+                        <li>Refrigerante</li>
+                        <li>Drinques</li>
+                        <li>Vinhos</li>
+                        <li>Cerveja</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="reservas" class="section reservas">
+            <div class="container">
+                <h2>Reservas</h2>
+                <form id="reservaForm" action="enviar_reserva.php" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+                    <label for="quantidade">Quantidade de pessoas:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" required>
+                    <input type="submit" value="Enviar Reserva">
+                </form>
+                <p id="confirmacao-reserva" style="display: none;">Reserva efetuada com sucesso! Em breve entraremos em contato para confirmar os detalhes.</p>
+            </div>
+        </section>
+        <section id="contato" class="section contact">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Telefone: (351) 912 630 687</p>
+                <p>Telefone: (351) 912 630 895</p>
+                <p>E-mail: info@childrenskingdom.pt</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Children's Kingdom. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Destaque de links de navegação ao rolar a página
+            window.addEventListener('scroll', function() {
+                var sections = document.querySelectorAll('section');
+                var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+                sections.forEach((section, index) => {
+                    if (scrollPosition >= section.offsetTop - 20 && scrollPosition < section.offsetTop + section.offsetHeight - 20) {
+                        document.querySelectorAll('.menu-link').forEach((link) => {
+                            link.classList.remove('active');
+                        });
+                        document.querySelectorAll('.menu-link')[index].classList.add('active');
+                    }
+                });
+            });
+
+            // Validação de formulário de reserva e exibição de mensagem de confirmação
+            document.getElementById('reservaForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+
+                var formData = new FormData(this);
+
+                fetch('enviar_reserva.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    if (result === 'success') {
+                        document.getElementById('reservaForm').reset(); // Limpa o formulário após o envio
+                        document.getElementById('confirmacao-reserva').style.display = 'block'; // Mostra a mensagem de confirmação
+                    } else {
+                        alert('Houve um problema ao enviar a reserva. Por favor, tente novamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Houve um problema ao enviar a reserva. Por favor, tente novamente.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

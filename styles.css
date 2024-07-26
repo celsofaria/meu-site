@@ -1,0 +1,211 @@
+/* Importação das fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+    font-family: 'Lora', serif; /* Fonte secundária para o texto */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #ffcc00;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Poppins', sans-serif; /* Fonte principal para o cabeçalho */
+    font-size: 2.5em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #333;
+    color: #ffcc00;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Seções */
+.section {
+    padding: 60px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.section p,
+.section ul {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo da seção do menu */
+.menu {
+    background-color: #fff;
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.menu-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.menu-category ul li {
+    margin-bottom: 10px;
+    color: #666;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-category ul li:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Formulário de Reserva */
+#reservaForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Lora', serif;
+}
+
+#reservaForm input[type="text"],
+#reservaForm input[type="email"],
+#reservaForm input[type="tel"],
+#reservaForm input[type="date"],
+#reservaForm input[type="time"],
+#reservaForm input[type="number"],
+#reservaForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    font-family: 'Lora', serif;
+}
+
+#reservaForm input[type="submit"] {
+    background-color: #f1b307; /* Amarelo claro */
+    color: #fff;
+    cursor: pointer;
+}
+
+#reservaForm input[type="submit"]:hover {
+    background-color: #e0a206; /* Amarelo mais escuro */
+}
+
+#confirmacao-reserva {
+    color: #3c763d; /* Verde escuro */
+    font-weight: bold;
+    display: none;
+}
+
+#confirmacao-reserva::before {
+    content: '\2714';
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
